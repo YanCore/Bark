@@ -3,7 +3,6 @@ from pyflowlauncher.jsonrpc import JsonRPCClient
 # from BarkNotificator import BarkNotificator
 from pyflowlauncher.result import Result
 from pyflowlauncher.api import open_url
-from typing import Generator
 STARS_PREFIX = "*"
 SEPERATOR = "/"
 
