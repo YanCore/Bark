@@ -23,11 +23,7 @@ def query(query: str) -> ResultResponse:
         bark.send(title=title, content=content)
 
         result = Result(
-            Title=repo.full_name,
-            SubTitle=repo.description,
-            IcoPath=repo.owner.avatar_url,
-            JsonRPCAction=open_url(repo.html_url),
-            CopyText=repo.full_name,
-            ContextData=[repo.full_name, repo.html_url],
+            Title=title,
+            SubTitle=content
         )
         return send_results(result)
