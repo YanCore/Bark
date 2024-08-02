@@ -19,14 +19,14 @@ def query(query: str) -> ResultResponse:
     query = query.strip()
     parsed_query = query.split(SEPERATOR)
 
-
     if token:
         title, content = parsed_query
         # bark.send(title=title, content=content)
+        bark
         api_url = 'https://api.day.app/{key}/{message}'
         url = api_url.format(key=token, message=f"{title}:{content}")
         r = requests.post(url)
-
+        r
         result = Result(
             Title=title,
             SubTitle=content
