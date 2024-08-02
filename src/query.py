@@ -10,7 +10,6 @@ PER_PAGE = 100
 SEARCH_LIMIT = 15
 
 
-    
 def query(query: str) -> ResultResponse:
     settings = JsonRPCClient().recieve().get("settings", {})
     token = settings.get("token", None) or None
@@ -20,10 +19,10 @@ def query(query: str) -> ResultResponse:
     parsed_query = query.split(SEPERATOR)
 
     if token:
-        title,content = parsed_query
+        title, content = parsed_query
         bark.send(title=title, content=content)
-        
-        result =  Result(
+
+        result = Result(
             Title=repo.full_name,
             SubTitle=repo.description,
             IcoPath=repo.owner.avatar_url,
