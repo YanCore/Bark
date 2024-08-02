@@ -3,7 +3,7 @@ from typing import Optional
 from pyflowlauncher import Plugin
 
 from query import query
-from context_menu import context_menu
+# from context_menu import context_menu
 
 
 def main(plugin: Optional[Plugin] = None):
