@@ -2,7 +2,7 @@ from pyflowlauncher.result import ResultResponse, send_results
 from pyflowlauncher.jsonrpc import JsonRPCClient
 from BarkNotificator import BarkNotificator
 from pyflowlauncher.result import Result
-from pyflowlauncher.api import open_url
+# from pyflowlauncher.api import open_url
 STARS_PREFIX = "*"
 SEPERATOR = "/"
 
