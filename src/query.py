@@ -24,8 +24,8 @@ def query(query: str) -> ResultResponse:
             title, content = parsed_query
             # bark.send(title=title, content=content)
             # bark
-            api_url = 'https://api.day.app/{key}/{message}'
-            url = api_url.format(key=token, message=f"{title}:{content}")
+            api_url = 'https://api.day.app/{key}/{title}/{message}'
+            url = api_url.format(key=token, title=title, message=content)
             result = Result(
                 Title=title,
                 SubTitle=content,
