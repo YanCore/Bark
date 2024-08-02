@@ -35,8 +35,8 @@ def query(query: str) -> ResultResponse:
         api_url = 'https://api.day.app/{key}/{message}'
         url = api_url.format(key=token, message=query)
         result = Result(
-            Title=title,
-            SubTitle=content,
+            Title=query,
+            SubTitle=query,
             JsonRPCAction=open_url(url)
         )
         return send_results(result)
