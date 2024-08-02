@@ -2,8 +2,7 @@ from pyflowlauncher.result import ResultResponse, send_results
 from pyflowlauncher.jsonrpc import JsonRPCClient
 # from BarkNotificator import BarkNotificator
 from pyflowlauncher.result import Result
-import requests
-
+from pyflowlauncher.api import open_url
 STARS_PREFIX = "*"
 SEPERATOR = "/"
 
@@ -26,10 +25,9 @@ def query(query: str) -> ResultResponse:
         # bark
         api_url = 'https://api.day.app/{key}/{message}'
         url = api_url.format(key=token, message=f"{title}:{content}")
-        r = requests.post(url)
-        r
         result = Result(
             Title=title,
-            SubTitle=content
+            SubTitle=content,
+            JsonRPCAction=open_url(url)
         )
         return send_results(result)
