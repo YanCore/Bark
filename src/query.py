@@ -34,7 +34,7 @@ def query(query: str) -> ResultResponse:
             return send_results([result])
         api_url = 'https://api.day.app/{key}/{message}'
         url = api_url.format(key=token, message=query)
-        bark.send(content=query)
+        # bark.send(content=query)
         result = Result(
             Title=query,
             SubTitle=query,
